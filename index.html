@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Future Academy</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #1d4ed8, #7c3aed);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .active-teacher {
+      transform: scale(1.03);
+      border-color: #2563eb;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+    }
+
+    .teacher-fade {
+      animation: teacherFade 0.35s ease;
+    }
+
+    @keyframes teacherFade {
+      from {
+        opacity: 0.3;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 md:px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="text-2xl font-extrabold text-blue-900">Bright Future</span>
+        <span class="text-xs text-slate-500">Kelajagingizni bugundan boshlang</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 font-medium text-slate-700">
+        <a href="#about" class="hover:text-blue-700 transition">Biz haqimizda</a>
+        <a href="#courses" class="hover:text-blue-700 transition">Kurslar</a>
+        <a href="#teachers" class="hover:text-blue-700 transition">Ustozlar</a>
+        <a href="#results" class="hover:text-blue-700 transition">Natijalar</a>
+        <a href="#reviews" class="hover:text-blue-700 transition">Fikrlar</a>
+        <a href="#contact" class="hover:text-blue-700 transition">Kontakt</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="open-register hidden sm:inline-flex bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-semibold px-5 py-2.5 rounded-2xl transition shadow-md">
+          Bepul dars
+        </a>
+        <button id="menuBtn" class="md:hidden text-3xl leading-none text-blue-900">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 pb-5">
+      <div class="flex flex-col gap-4 pt-4 font-medium text-slate-700">
+        <a href="#about" class="mobile-link">Biz haqimizda</a>
+        <a href="#courses" class="mobile-link">Kurslar</a>
+        <a href="#teachers" class="mobile-link">Ustozlar</a>
+        <a href="#results" class="mobile-link">Natijalar</a>
+        <a href="#reviews" class="mobile-link">Fikrlar</a>
+        <a href="#contact" class="mobile-link">Kontakt</a>
+        <a href="#" class="open-register bg-yellow-400 text-blue-950 font-semibold px-5 py-3 rounded-2xl text-center">Bepul dars</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative pt-32 md:pt-36 pb-20 md:pb-24 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-72 h-72 bg-yellow-300/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <span class="inline-flex items-center gap-2 bg-yellow-400 text-blue-950 px-4 py-2 rounded-full text-sm font-semibold shadow-lg mb-6">
+          Zamonaviy o‘quv markaz
+        </span>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Farzandingiz 3 oy ichida <span class="text-yellow-300">ingliz tilida</span> ancha ishonchli gapira boshlaydi
+        </h1>
+
+        <p class="text-lg md:text-xl text-blue-100 leading-8 max-w-2xl mb-8">
+          Bright Future Academy’da bolalar va kattalar uchun zamonaviy metodika asosida
+          ingliz tili, matematika, IELTS va SAT kurslari mavjud.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#" class="open-register bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold px-7 py-4 rounded-2xl transition shadow-xl text-center">
+            Bepul sinov darsiga yozilish
+          </a>
+          <a href="#courses" class="border border-white/50 hover:bg-white hover:text-blue-950 px-7 py-4 rounded-2xl transition text-center">
+            Kurslar bilan tanishish
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10">
+          <div class="bg-white/10 rounded-2xl p-4 border border-white/10">
+            <div class="text-2xl font-bold">1500+</div>
+            <div class="text-sm text-blue-100">O‘quvchi</div>
+          </div>
+          <div class="bg-white/10 rounded-2xl p-4 border border-white/10">
+            <div class="text-2xl font-bold">6 yil</div>
+            <div class="text-sm text-blue-100">Tajriba</div>
+          </div>
+          <div class="bg-white/10 rounded-2xl p-4 border border-white/10">
+            <div class="text-2xl font-bold">20+</div>
+            <div class="text-sm text-blue-100">Ustozlar</div>
+          </div>
+          <div class="bg-white/10 rounded-2xl p-4 border border-white/10">
+            <div class="text-2xl font-bold">95%</div>
+            <div class="text-sm text-blue-100">Mamnunlik</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="zoom-in" data-aos-duration="1100" class="relative">
+        <div class="bg-white rounded-[32px] shadow-2xl p-4 md:p-5">
+          <img src="images/student-4.jpg" alt="Student" class="w-full h-[520px] object-cover rounded-[26px]">
+        </div>
+
+        <div class="absolute -left-2 md:-left-10 top-10 bg-white text-slate-900 rounded-2xl shadow-xl px-4 py-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-xs text-slate-500">IELTS natija</div>
+          <div class="font-bold text-xl text-blue-900">8.0 Overall</div>
+        </div>
+
+        <div class="absolute -right-2 md:-right-8 bottom-10 bg-yellow-400 text-blue-950 rounded-2xl shadow-xl px-4 py-3" data-aos="fade-up" data-aos-delay="350">
+          <div class="text-xs">Qabul qilingan</div>
+          <div class="font-bold text-lg">Webster University</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-14 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div data-aos="fade-up" class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition text-center">
+        <div class="text-4xl font-extrabold text-blue-900">1500+</div>
+        <div class="text-slate-500 mt-2">O‘quvchi</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition text-center">
+        <div class="text-4xl font-extrabold text-blue-900">6 yil</div>
+        <div class="text-slate-500 mt-2">Tajriba</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition text-center">
+        <div class="text-4xl font-extrabold text-blue-900">95%</div>
+        <div class="text-slate-500 mt-2">Mamnun o‘quvchilar</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300" class="bg-white rounded-3xl p-7 shadow-sm hover:shadow-xl transition text-center">
+        <div class="text-4xl font-extrabold text-blue-900">20+</div>
+        <div class="text-slate-500 mt-2">Malakali ustoz</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <p class="text-yellow-500 font-semibold mb-3 uppercase tracking-wider">Muammo va yechim</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
+          Nega ko‘pchilik o‘quvchilar <span class="gradient-text">natijaga chiqolmaydi?</span>
+        </h2>
+        <p class="text-slate-600 text-lg leading-8 mb-5">
+          Ko‘p o‘quv markazlarda darslar faqat nazariya bilan cheklanib qoladi. O‘quvchi amaliyot qilmaydi,
+          nazorat sust bo‘ladi va ota-onaga aniq hisobot berilmaydi.
+        </p>
+        <p class="text-slate-600 text-lg leading-8">
+          Bright Future Academy’da esa har bir o‘quvchi darajasi bo‘yicha guruhlarga ajratiladi,
+          muntazam test qilinadi va natijasi kuzatib boriladi.
+        </p>
+      </div>
+
+      <div class="grid gap-5">
+        <div data-aos="fade-left" class="bg-blue-50 rounded-3xl p-7 hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-blue-900 mb-2">Darajaga mos guruhlar</h3>
+          <p class="text-slate-600 leading-7">Har bir o‘quvchi bilim darajasiga qarab guruhga joylashtiriladi.</p>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="120" class="bg-yellow-50 rounded-3xl p-7 hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-blue-900 mb-2">Amaliy darslar</h3>
+          <p class="text-slate-600 leading-7">Faqat qoidalar emas, gapirish, yechish va ishlash orqali o‘rganiladi.</p>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="240" class="bg-purple-50 rounded-3xl p-7 hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-blue-900 mb-2">Natija nazorati</h3>
+          <p class="text-slate-600 leading-7">Har oy test, hisobot va ota-onaga ma’lumot beriladi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+  <!-- Card 1 -->
+  <div data-aos="fade-up" class="group bg-white border border-slate-200 rounded-[32px] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+    <div class="flex items-center justify-between mb-6">
+      <span class="inline-flex px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold">
+        Beginner Friendly
+      </span>
+      <div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl">
+        📘
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">General English</h3>
+
+    <p class="text-slate-600 leading-7 mb-6">
+      Ingliz tilini 0 dan boshlab bosqichma-bosqich kuchaytirish uchun qulay kurs.
+    </p>
+
+    <div class="space-y-3 mb-8">
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>0 dan Intermediate</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>Speaking focused lessons</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>Haftasiga 3 kun</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>Free books</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>Kichik guruhlar</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+        <span>Doimiy nazorat</span>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-slate-200 space-y-4">
+      <div>
+        <p class="text-sm text-slate-500">Boshlanish narxi</p>
+        <p class="text-3xl font-extrabold text-slate-900">
+          800 000 <span class="text-base font-semibold">so‘m</span>
+        </p>
+      </div>
+
+      <button class="open-register w-full px-5 py-3 rounded-2xl bg-slate-900 text-white font-semibold hover:bg-blue-700 transition">
+        Ro‘yxatdan o‘tish
+      </button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div data-aos="fade-up" data-aos-delay="100" class="group bg-gradient-to-b from-orange-50 to-white border border-orange-200 rounded-[32px] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+    <div class="flex items-center justify-between mb-6">
+      <span class="inline-flex px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">
+        Fast Track
+      </span>
+      <div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl">
+        🚀
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">IELTS Master</h3>
+
+    <p class="text-slate-600 leading-7 mb-6">
+      Intermediate darajadan IELTS formatiga o‘tish uchun maxsus tayyorlov.
+    </p>
+
+    <div class="space-y-3 mb-8">
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Mock exams</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Writing & speaking practice</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Band score strategy</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Haftasiga 3 kun</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Free books</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+        <span>Support teacher system</span>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-orange-200 space-y-4">
+      <div>
+        <p class="text-sm text-slate-500">Boshlanish narxi</p>
+        <p class="text-3xl font-extrabold text-slate-900">
+          950 000 <span class="text-base font-semibold">so‘m</span>
+        </p>
+      </div>
+
+      <button class="open-register w-full px-5 py-3 rounded-2xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
+        Ro‘yxatdan o‘tish
+      </button>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div data-aos="fade-up" data-aos-delay="200" class="group bg-gradient-to-b from-violet-50 to-white border border-violet-200 rounded-[32px] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+    <div class="flex items-center justify-between mb-6">
+      <span class="inline-flex px-4 py-2 rounded-full bg-violet-100 text-violet-700 text-sm font-semibold">
+        Most Popular
+      </span>
+      <div class="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">IELTS Pro</h3>
+
+    <p class="text-slate-600 leading-7 mb-6">
+      Kamida B2 darajadagi o‘quvchilar uchun professional IELTS tayyorlov dasturi.
+    </p>
+
+    <div class="space-y-3 mb-8">
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Advanced strategies</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Writing feedback</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Speaking clubs</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Haftasiga 3 kun</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Free books</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+        <span>Weekly progress checks</span>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-violet-200 space-y-4">
+      <div>
+        <p class="text-sm text-slate-500">Boshlanish narxi</p>
+        <p class="text-3xl font-extrabold text-slate-900">
+          900 000 <span class="text-base font-semibold">so‘m</span>
+        </p>
+      </div>
+
+      <button class="open-register w-full px-5 py-3 rounded-2xl bg-violet-600 text-white font-semibold hover:bg-violet-700 transition">
+        Ro‘yxatdan o‘tish
+      </button>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div data-aos="fade-up" data-aos-delay="300" class="group bg-gradient-to-b from-emerald-50 to-white border border-emerald-200 rounded-[32px] p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+    <div class="flex items-center justify-between mb-6">
+      <span class="inline-flex px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold">
+        University Path
+      </span>
+      <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl">
+        🎓
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">SAT / Math</h3>
+
+    <p class="text-slate-600 leading-7 mb-6">
+      SAT Math/English, mantiq va universitetga kirish uchun akademik tayyorgarlik kursi.
+    </p>
+
+    <div class="space-y-3 mb-8">
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>SAT Math/English preparation</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>Logical thinking</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>University guidance</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>Haftasiga 3 kun</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>Free books</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-700">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span>Strong mentor support</span>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-emerald-200 space-y-4">
+      <div>
+        <p class="text-sm text-slate-500">Boshlanish narxi</p>
+        <p class="text-3xl font-extrabold text-slate-900">
+          1 200 000 <span class="text-base font-semibold">so‘m</span>
+        </p>
+      </div>
+
+      <button class="open-register w-full px-5 py-3 rounded-2xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition">
+        Ro‘yxatdan o‘tish
+      </button>
+    </div>
+  </div>
+
+</div>
+
+  <!-- TEACHERS -->
+  <section id="teachers" class="py-24 bg-gradient-to-r from-yellow-50 via-white to-purple-100">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <p class="text-sm font-semibold text-blue-700 uppercase tracking-widest">Learn from best</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3">Bizning ustozlar</h2>
+        <p class="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
+          Pastdagi ustozlardan birini tanlang va uning ma’lumotlarini ko‘ring.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-10" data-aos="zoom-in">
+        <button
+          class="teacher-tab active-teacher px-5 py-3 bg-white rounded-full shadow-lg border flex items-center gap-4 transition hover:shadow-xl"
+          data-name="Madina Xasanova"
+          data-role="Senior IELTS Instructor"
+          data-score="8.0"
+          data-cert="CELTA"
+          data-students="500+"
+          data-exp="8 yil"
+          data-image="images/teacher-1.jpg"
+          data-bio="Tajribali IELTS instructor sifatida yuzlab o‘quvchilarga yuqori natijaga chiqishda yordam bergan. Darslar davomida speaking, writing va test strategiyalariga alohida e’tibor qaratiladi."
+        >
+          <img src="images/teacher-1.jpg" class="w-12 h-12 rounded-full object-cover ring-4 ring-yellow-300" alt="Madina Xasanova">
+          <div class="text-left">
+            <h3 class="font-bold text-lg text-slate-900">Madina Xasanova</h3>
+            <p class="text-sm text-slate-500">IELTS 8.0</p>
+          </div>
+        </button>
+
+        <button
+          class="teacher-tab px-5 py-3 bg-white rounded-full shadow-lg border flex items-center gap-4 transition hover:shadow-xl"
+          data-name="Azizbek Kayumov"
+          data-role="IELTS Speaking & Writing Expert"
+          data-score="8.5"
+          data-cert="TESOL"
+          data-students="420+"
+          data-exp="6 yil"
+          data-image="images/teacher-2.jpg"
+          data-bio="Speaking va Writing yo‘nalishlarida ixtisoslashgan. O‘quvchilarga band score oshirish uchun individual feedback va kuchli practice tizimini beradi."
+        >
+          <img src="images/teacher-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="Azizbek Kayumov">
+          <div class="text-left">
+            <h3 class="font-bold text-lg text-slate-900">Azizbek Kayumov</h3>
+            <p class="text-sm text-slate-500">IELTS 8.5</p>
+          </div>
+        </button>
+
+        <button
+          class="teacher-tab px-5 py-3 bg-white rounded-full shadow-lg border flex items-center gap-4 transition hover:shadow-xl"
+          data-name="Sardor Rahimov"
+          data-role="SAT / Math Mentor"
+          data-score="1490 SAT"
+          data-cert="SAT Math"
+          data-students="300+"
+          data-exp="7 yil"
+          data-image="images/teacher-3.jpg"
+          data-bio="SAT Math va mantiq bo‘yicha kuchli mentor. Ko‘plab o‘quvchilarga yuqori SAT score qilish va universitetga tayyorlanishda yordam bergan."
+        >
+          <img src="images/teacher-3.jpg" class="w-12 h-12 rounded-full object-cover" alt="Sardor Rahimov">
+          <div class="text-left">
+            <h3 class="font-bold text-lg text-slate-900">Sardor Rahimov</h3>
+            <p class="text-sm text-slate-500">SAT / Math</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div class="rounded-[32px] overflow-hidden shadow-2xl bg-white p-4">
+            <img
+              id="teacherMainImage"
+              src="images/teacher-1.jpg"
+              alt="Teacher"
+              class="w-full h-[520px] object-cover rounded-[24px] transition duration-500"
+            >
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <p id="teacherRole" class="text-blue-700 font-semibold uppercase tracking-wider mb-3">
+            Senior IELTS Instructor
+          </p>
+
+          <h3 id="teacherName" class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
+            Madina Xasanova
+          </h3>
+
+          <div class="grid grid-cols-2 gap-5 mb-8">
+            <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+              <h3 id="teacherScore" class="text-4xl md:text-5xl font-extrabold text-slate-900">8.0</h3>
+              <p class="text-xl font-semibold mt-2 text-slate-700">Score</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+              <h3 id="teacherCert" class="text-4xl md:text-5xl font-extrabold text-slate-900">CELTA</h3>
+              <p class="text-xl font-semibold mt-2 text-slate-700">Certified</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+              <h3 id="teacherStudents" class="text-4xl md:text-5xl font-extrabold text-slate-900">500+</h3>
+              <p class="text-xl font-semibold mt-2 text-slate-700">Students</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+              <h3 id="teacherExp" class="text-4xl md:text-5xl font-extrabold text-slate-900">8 yil</h3>
+              <p class="text-xl font-semibold mt-2 text-slate-700">Tajriba</p>
+            </div>
+          </div>
+
+          <p id="teacherBio" class="text-lg leading-8 text-slate-600">
+            Tajribali IELTS instructor sifatida yuzlab o‘quvchilarga yuqori natijaga chiqishda yordam bergan.
+            Darslar davomida speaking, writing va test strategiyalariga alohida e’tibor qaratiladi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="py-24 bg-gradient-to-r from-white via-pink-50 to-purple-100">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-sm font-semibold text-blue-700 uppercase tracking-widest">Top results</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3">O‘quvchilarimiz natijalari</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div data-aos="fade-up" class="bg-white rounded-[32px] shadow-xl p-6 hover:shadow-2xl transition">
+          <div class="grid md:grid-cols-[220px_1fr] gap-6 items-center">
+            <div class="relative">
+              <img src="images/student-1.jpg" alt="Student" class="w-full h-[320px] object-cover rounded-[28px]">
+              <div class="absolute top-4 left-4 bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold">
+                IELTS 8.0
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Muhammadali</h3>
+              <div class="space-y-3 mb-6">
+                <div class="bg-green-500 text-white px-5 py-3 rounded-2xl font-semibold">Listening 8.5</div>
+                <div class="bg-purple-600 text-white px-5 py-3 rounded-2xl font-semibold">Reading 8.0</div>
+                <div class="bg-yellow-500 text-white px-5 py-3 rounded-2xl font-semibold">Writing 7.0</div>
+                <div class="bg-orange-500 text-white px-5 py-3 rounded-2xl font-semibold">Speaking 8.0</div>
+                <div class="bg-red-500 text-white px-5 py-3 rounded-2xl font-bold">Overall 8.0</div>
+              </div>
+              <p class="text-slate-600 leading-7">
+                5 oy davomida intensiv tayyorlanib, yuqori IELTS natijasiga erishgan va xalqaro universitetlarga topshirish darajasiga chiqqan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="120" class="bg-white rounded-[32px] shadow-xl p-6 hover:shadow-2xl transition">
+          <div class="grid md:grid-cols-[220px_1fr] gap-6 items-center">
+            <div class="relative">
+              <img src="images/student-2.jpg" alt="Student" class="w-full h-[320px] object-cover rounded-[28px]">
+              <div class="absolute top-4 left-4 bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold">
+                SAT 1490
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Javohir</h3>
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-blue-50 rounded-2xl p-5">
+                  <p class="text-sm text-slate-500">Math</p>
+                  <p class="text-3xl font-extrabold text-slate-900">790</p>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-5">
+                  <p class="text-sm text-slate-500">Verbal</p>
+                  <p class="text-3xl font-extrabold text-slate-900">700</p>
+                </div>
+                <div class="bg-purple-50 rounded-2xl p-5 col-span-2">
+                  <p class="text-sm text-slate-500">University</p>
+                  <p class="text-2xl font-extrabold text-slate-900">Westminister University</p>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-7">
+                SAT Math va English bo‘yicha tizimli tayyorlanib, yuqori natijaga erishdi va xalqaro universitetga qabul qilindi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" class="bg-white rounded-[32px] shadow-xl p-6 hover:shadow-2xl transition">
+          <div class="grid md:grid-cols-[220px_1fr] gap-6 items-center">
+            <div class="relative">
+              <img src="images/student-3.jpg" alt="Student" class="w-full h-[320px] object-cover rounded-[28px]">
+              <div class="absolute top-4 left-4 bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold">
+                IELTS 7.5
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Sevinch</h3>
+              <div class="space-y-3 mb-6">
+                <div class="bg-emerald-500 text-white px-5 py-3 rounded-2xl font-semibold">Listening 8.0</div>
+                <div class="bg-indigo-500 text-white px-5 py-3 rounded-2xl font-semibold">Reading 7.5</div>
+                <div class="bg-pink-500 text-white px-5 py-3 rounded-2xl font-semibold">Writing 7.0</div>
+                <div class="bg-orange-500 text-white px-5 py-3 rounded-2xl font-semibold">Speaking 7.5</div>
+                <div class="bg-blue-900 text-white px-5 py-3 rounded-2xl font-bold">Overall 7.5</div>
+              </div>
+              <p class="text-slate-600 leading-7">
+                Speaking confidence va writing structure ustida kuchli ishlash orqali ishonchli natijaga chiqqan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="120" class="bg-white rounded-[32px] shadow-xl p-6 hover:shadow-2xl transition">
+          <div class="grid md:grid-cols-[220px_1fr] gap-6 items-center">
+            <div class="relative">
+              <img src="images/student-4.jpg" alt="Student" class="w-full h-[320px] object-cover rounded-[28px]">
+              <div class="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                University Admission
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Azimjon</h3>
+              <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                <div class="bg-green-50 rounded-2xl p-4 min-w-0 flex flex-col justify-center">
+                  <p class="text-sm text-slate-500">Status</p>
+                  <p class="text-base sm:text-lg md:text-2xl font-extrabold text-slate-900 leading-tight break-words whitespace-normal">
+                    Accepted
+                  </p>
+                </div>
+
+                <div class="bg-yellow-50 rounded-2xl p-4 min-w-0 flex flex-col justify-center">
+                  <p class="text-sm text-slate-500">Program</p>
+                  <p class="text-base sm:text-lg md:text-2xl font-extrabold text-slate-900 leading-tight break-words whitespace-normal">
+                    Bachelor
+                  </p>
+                </div>
+
+                <div class="bg-blue-50 rounded-2xl p-5 col-span-2">
+                  <p class="text-sm text-slate-500">University</p>
+                  <p class="text-2xl font-extrabold text-slate-900">Webster University</p>
+                </div>
+              </div>
+              <p class="text-slate-600 leading-7">
+                Ingliz tili va akademik tayyorgarlikni kuchaytirib, xalqaro universitetga muvaffaqiyatli qabul qilindi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <p class="text-sm font-semibold text-blue-700 uppercase tracking-widest">Student Reviews</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3">O‘quvchilar va ota-onalar fikri</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div data-aos="fade-up" class="border-2 border-purple-300 rounded-[28px] p-7 bg-white hover:shadow-2xl transition">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-2xl font-bold">Asila</h3>
+              <p class="text-slate-500">Amir Temur Filial</p>
+            </div>
+            <div class="text-yellow-500 font-bold">5.0 ★</div>
+          </div>
+          <p class="text-slate-600 leading-8">
+            IELTS ZONE juda ham yaxshi o‘quv markazi ekaniga amin bo‘ldim. Ustozlari talabchan va tajribali,
+            darslarga e’tiborli, natijalar esa sezilarli.
+          </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="120" class="border-2 border-purple-700 rounded-[28px] p-7 bg-purple-700 text-white hover:shadow-2xl transition">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-2xl font-bold">Quvonchbek</h3>
+              <p class="text-purple-100">Jahon Tillari Filial</p>
+            </div>
+            <div class="text-yellow-300 font-bold">5.0 ★</div>
+          </div>
+          <p class="leading-8 text-purple-50">
+            Bu yerda o‘quv jarayoni juda tartibli. Qo‘shimcha support, nazorat va motivatsiya juda kuchli.
+            Har bir dars o‘z vaqtida, esdan chiqqan mavzular ham qayta ishlanadi.
+          </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="240" class="border-2 border-purple-300 rounded-[28px] p-7 bg-white hover:shadow-2xl transition">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-2xl font-bold">Maftuna</h3>
+              <p class="text-slate-500">Integro Filial</p>
+            </div>
+            <div class="text-yellow-500 font-bold">5.0 ★</div>
+          </div>
+          <p class="text-slate-600 leading-8">
+            Ingliz tilini o‘rganishda atmosfera juda muhim. Bu markazda nafaqat dars, balki do‘stona va motivatsion muhit ham bor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-24 bg-gradient-to-r from-slate-50 to-purple-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <p class="text-sm font-semibold text-blue-700 uppercase tracking-widest">Events & Life</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3">Oquv Markazdan estaliklar</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="grid gap-5">
+          <div data-aos="zoom-in" class="bg-white rounded-[28px] overflow-hidden shadow-lg group">
+            <img src="images/pic4.jpg" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" alt="">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="80" class="bg-white rounded-[28px] overflow-hidden shadow-lg group">
+            <img src="images/pic2.jpg" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500" alt="">
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="120" class="bg-white rounded-[28px] overflow-hidden shadow-lg group">
+          <img src="images/pic3.jpg" class="w-full h-full min-h-[560px] object-cover group-hover:scale-105 transition duration-500" alt="">
+        </div>
+
+        <div class="grid gap-5">
+          <div data-aos="zoom-in" data-aos-delay="160" class="bg-white rounded-[28px] overflow-hidden shadow-lg group">
+            <img src="images/student-3.jpg" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500" alt="">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="240" class="bg-white rounded-[28px] overflow-hidden shadow-lg group">
+            <img src="images/pic.jpg" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="form" class="py-24 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white">
+    <div class="max-w-6xl mx-auto px-5 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <p class="text-yellow-300 font-semibold uppercase tracking-widest mb-3">Ro‘yxatdan o‘tish</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Hoziroq bepul sinov darsiga yoziling</h2>
+        <p class="text-blue-100 text-lg leading-8">
+          Joylar soni cheklangan. Farzandingiz yoki o‘zingiz uchun mos kursni tanlang
+          va birinchi qadamni bugun tashlang.
+        </p>
+      </div>
+
+      <div data-aos="fade-left" class="flex justify-center lg:justify-end">
+        <button
+          class="open-register inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold px-8 py-4 rounded-2xl transition shadow-2xl text-lg">
+          Bepul darsga yozilish
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-gradient-to-b from-white via-slate-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-sm font-semibold text-blue-700 uppercase tracking-[0.2em] mb-3">Contact</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900">
+          Biz bilan <span class="gradient-text">bog‘laning</span>
+        </h2>
+        <p class="text-slate-600 mt-4">
+          Savollaringiz bormi? Biz bilan bog‘laning va bepul konsultatsiya oling
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-stretch">
+        <div data-aos="fade-right" class="bg-white rounded-[32px] p-8 shadow-lg border border-slate-200">
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-xl">📞</div>
+              <div>
+                <p class="text-sm text-slate-500">Telefon</p>
+                <a href="tel:+998979971757" class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition">+998 97 997 17 57</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-xl">💬</div>
+              <div>
+                <p class="text-sm text-slate-500">Telegram</p>
+                <a href="https://t.me/brightfuture_admin" target="_blank" class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition">@brightfuture_admin</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-xl">📍</div>
+              <div>
+                <p class="text-sm text-slate-500">Manzil</p>
+                <a href="https://maps.google.com/?q=Tashkent" target="_blank" class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition">
+                  Toshkent, Chilonzor tumani
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-xl">🕒</div>
+              <div>
+                <p class="text-sm text-slate-500">Ish vaqti</p>
+                <p class="text-lg font-semibold text-slate-900">Dushanba – Shanba (9:00 - 21:00)</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="open-register mt-10 inline-block w-full text-center bg-blue-600 text-white py-3 rounded-2xl font-semibold hover:bg-blue-700 transition">
+            Bepul darsga yozilish
+          </a>
+        </div>
+
+        <div data-aos="fade-left" class="rounded-[32px] overflow-hidden shadow-lg border border-slate-200 relative group">
+          <iframe
+            src="https://www.google.com/maps?q=Tashkent&output=embed"
+            class="w-full h-full min-h-[420px] border-0 pointer-events-none">
+          </iframe>
+
+          <a href="https://maps.google.com/?q=Tashkent" target="_blank"
+             class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition">
+            <span class="opacity-0 group-hover:opacity-100 transition bg-white px-5 py-2 rounded-xl font-semibold shadow">
+              📍 Xarita ochish
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-5 md:px-6">
+      <div class="grid md:grid-cols-2 gap-10 pb-10 border-b border-white/10">
+        <div>
+          <h3 class="text-4xl font-extrabold mb-4">Bright Future</h3>
+          <p class="text-slate-400 leading-7 max-w-md">
+            Zamonaviy metodika asosida IELTS, SAT va General English kurslari.
+            Natijaga yo‘naltirilgan ta’lim.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-2xl font-bold mb-4">Sahifalar</h4>
+          <div class="space-y-3 text-slate-400">
+            <p><a href="#courses" class="hover:text-white transition">Kurslar</a></p>
+            <p><a href="#teachers" class="hover:text-white transition">Ustozlar</a></p>
+            <p><a href="#results" class="hover:text-white transition">Natijalar</a></p>
+            <p><a href="#contact" class="hover:text-white transition">Kontakt</a></p>
+            <p><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-slate-500 text-sm">
+        © 2026 Bright Future Academy. Barcha huquqlar himoyalangan.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTON -->
+  <a href="#" class="open-register fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-slate-900 hover:bg-blue-700 text-white shadow-2xl flex items-center justify-center text-2xl transition">
+    ☎
+  </a>
+
+  <!-- REGISTER MODAL -->
+  <div id="registerModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 px-4">
+    <div class="relative w-full max-w-xl rounded-[28px] bg-white text-slate-800 shadow-2xl overflow-hidden">
+
+      <button id="closeModal"
+        class="absolute right-4 top-4 text-2xl text-slate-400 hover:text-slate-700 transition">
+        ×
+      </button>
+
+      <!-- FORM VIEW -->
+      <div id="modalFormView" class="p-8 md:p-10">
+        <h3 class="text-3xl font-extrabold mb-2 text-slate-900">Bepul darsga yozilish</h3>
+        <p class="text-slate-500 mb-6">
+          Ma’lumotlaringizni qoldiring, operatorimiz siz bilan tez orada bog‘lanadi.
+        </p>
+
+        <form id="leadForm" class="space-y-5">
+          <div>
+            <label class="block text-sm font-medium mb-2">Ismingiz</label>
+            <input id="name" name="name" type="text" placeholder="Ismingizni kiriting"
+              class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2">Telefon raqamingiz</label>
+           <input 
+  id="phone"
+  name="phone"
+  type="tel"
+  placeholder="+998 90 123 45 67"
+  class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+
+
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2">Kursni tanlang</label>
+            <select id="course" name="course"
+              class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <option>General English</option>
+              <option>IELTS Master</option>
+              <option>IELTS</option>
+              <option>SAT / Math</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2">Xabar</label>
+            <textarea id="message" name="message" rows="5" placeholder="Qo‘shimcha ma’lumot yozing"
+              class="w-full border border-slate-300 rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-bold py-4 rounded-2xl transition shadow-lg">
+            Ariza yuborish
+          </button>
+        </form>
+      </div>
+
+      <!-- SUCCESS VIEW -->
+      <div id="modalSuccessView" class="hidden p-8 md:p-10">
+        <div class="border border-emerald-200 rounded-[24px] p-8 text-center bg-emerald-50">
+          <div class="text-4xl mb-4">🎉</div>
+          <h3 class="text-3xl font-extrabold text-slate-900 mb-3">So‘rovingiz muvaffaqiyatli qabul qilindi</h3>
+          <p class="text-slate-600 leading-7 max-w-md mx-auto">
+            Arizangiz bizga yetib keldi. Tez orada siz bilan bog‘lanib, bepul dars bo‘yicha batafsil ma’lumot beramiz.
+          </p>
+
+          <button id="closeSuccess"
+            class="mt-6 inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-slate-900 text-white font-semibold hover:bg-blue-700 transition">
+            Yopish
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  let phoneInput;
+
+  AOS.init({
+    duration: 900,
+    once: true,
+    offset: 60
+  });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  menuBtn?.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+
+  // TEACHER SWITCHER
+  const teacherTabs = document.querySelectorAll(".teacher-tab");
+  const teacherMainImage = document.getElementById("teacherMainImage");
+  const teacherName = document.getElementById("teacherName");
+  const teacherRole = document.getElementById("teacherRole");
+  const teacherScore = document.getElementById("teacherScore");
+  const teacherCert = document.getElementById("teacherCert");
+  const teacherStudents = document.getElementById("teacherStudents");
+  const teacherExp = document.getElementById("teacherExp");
+  const teacherBio = document.getElementById("teacherBio");
+
+  teacherTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      teacherTabs.forEach((item) => item.classList.remove("active-teacher"));
+      tab.classList.add("active-teacher");
+
+      teacherMainImage.classList.remove("teacher-fade");
+      teacherName.classList.remove("teacher-fade");
+      teacherRole.classList.remove("teacher-fade");
+      teacherScore.classList.remove("teacher-fade");
+      teacherCert.classList.remove("teacher-fade");
+      teacherStudents.classList.remove("teacher-fade");
+      teacherExp.classList.remove("teacher-fade");
+      teacherBio.classList.remove("teacher-fade");
+
+      void teacherMainImage.offsetWidth;
+
+      teacherMainImage.src = tab.dataset.image;
+      teacherMainImage.alt = tab.dataset.name;
+      teacherName.textContent = tab.dataset.name;
+      teacherRole.textContent = tab.dataset.role;
+      teacherScore.textContent = tab.dataset.score;
+      teacherCert.textContent = tab.dataset.cert;
+      teacherStudents.textContent = tab.dataset.students;
+      teacherExp.textContent = tab.dataset.exp;
+      teacherBio.textContent = tab.dataset.bio;
+
+      teacherMainImage.classList.add("teacher-fade");
+      teacherName.classList.add("teacher-fade");
+      teacherRole.classList.add("teacher-fade");
+      teacherScore.classList.add("teacher-fade");
+      teacherCert.classList.add("teacher-fade");
+      teacherStudents.classList.add("teacher-fade");
+      teacherExp.classList.add("teacher-fade");
+      teacherBio.classList.add("teacher-fade");
+    });
+  });
+
+  // MODAL
+  const modal = document.getElementById("registerModal");
+  const closeModalBtn = document.getElementById("closeModal");
+  const closeSuccessBtn = document.getElementById("closeSuccess");
+  const openButtons = document.querySelectorAll(".open-register");
+
+  const modalFormView = document.getElementById("modalFormView");
+  const modalSuccessView = document.getElementById("modalSuccessView");
+
+  const form = document.getElementById("leadForm");
+  const nameInput = document.getElementById("name");
+  phoneInput = document.getElementById("phone");
+  const courseInput = document.getElementById("course");
+  const messageInput = document.getElementById("message");
+
+    function openModal() {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+
+    function showFormView() {
+      modalFormView.classList.remove("hidden");
+      modalSuccessView.classList.add("hidden");
+    }
+
+    function showSuccessView() {
+      modalFormView.classList.add("hidden");
+      modalSuccessView.classList.remove("hidden");
+    }
+
+    openButtons.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        showFormView();
+        openModal();
+      });
+    });
+
+    closeModalBtn.addEventListener("click", closeModal);
+    closeSuccessBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+      }
+    });
+
+    // Phone input formatting
+    phoneInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/\D/g, ""); // faqat raqamlar
+
+      if (value.startsWith("998")) {
+        value = value.slice(3);
+      }
+
+      let formatted = "+998";
+
+      if (value.length > 0) {
+        formatted += " " + value.substring(0, 2);
+      }
+      if (value.length >= 3) {
+        formatted += " " + value.substring(2, 5);
+      }
+      if (value.length >= 6) {
+        formatted += " " + value.substring(5, 7);
+      }
+      if (value.length >= 8) {
+        formatted += " " + value.substring(7, 9);
+      }
+
+      e.target.value = formatted;
+      localStorage.setItem("lead_phone", e.target.value);
+    });
+
+    // LocalStorage
+    nameInput.addEventListener("input", () => localStorage.setItem("lead_name", nameInput.value));
+    courseInput.addEventListener("change", () => localStorage.setItem("lead_course", courseInput.value));
+    messageInput.addEventListener("input", () => localStorage.setItem("lead_message", messageInput.value));
+
+    window.addEventListener("DOMContentLoaded", () => {
+      nameInput.value = localStorage.getItem("lead_name") || "";
+      phoneInput.value = localStorage.getItem("lead_phone") || "";
+      courseInput.value = localStorage.getItem("lead_course") || "General English";
+      messageInput.value = localStorage.getItem("lead_message") || "";
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const course = courseInput.value || "Tanlanmagan";
+      const messageText = messageInput.value.trim() || "-";
+
+      if (!name || !phone) {
+        alert("Iltimos, ism va telefon raqamingizni kiriting.");
+        return;
+      }
+
+      const botToken = "8292513906:AAE4ory_IN9aFhBCh4dKK8yU7crftmtJXYs";
+      const chatId = "2043209806";
+
+      const text = `📥 Yangi ariza
+
+👤 Ism: ${name}
+📞 Telefon: ${phone}
+📚 Kurs: ${course}
+💬 Xabar: ${messageText}`;
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text
+        })
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.ok) {
+          showSuccessView();
+          form.reset();
+
+          localStorage.removeItem("lead_name");
+          localStorage.removeItem("lead_phone");
+          localStorage.removeItem("lead_course");
+          localStorage.removeItem("lead_message");
+        } else {
+          alert("Yuborishda muammo yuz berdi.");
+          console.log(data);
+        }
+      })
+      .catch((err) => {
+        alert("Xatolik yuz berdi.");
+        console.log(err);
+      });
+    });
+    
+  </script>
+</body>
+</html>
